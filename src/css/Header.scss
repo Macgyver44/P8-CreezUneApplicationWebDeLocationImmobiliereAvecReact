@@ -1,0 +1,64 @@
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem; /* Réduisez la hauteur en ajustant le padding */
+
+  .logo img {
+    height: 40px;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+
+    li a {
+      text-decoration: none;
+      color: #000000;
+      font-weight: bold;
+      transition: color 0.3s ease; /* Ajoutez une transition pour l'animation */
+
+      &:hover {
+        color: #007bff; /* Changez la couleur au survol */
+      }
+    }
+  }
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+
+  &:hover {
+    filter: drop-shadow(0 0 2em #646cffaa);
+  }
+
+  &.react:hover {
+    filter: drop-shadow(0 0 2em #61dafbaa);
+  }
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(100deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}

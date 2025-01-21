@@ -1,0 +1,26 @@
+/* filepath: /c:/FormationIntegrateur_bac+2/Projet 8/Créez_une_application_web_de_location_React_mouici_ahmed/mouici_ahmed_8_lien_repo_Réact_082025/kasa-p8/src/css/Footer.scss */
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background-color: #000000;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+
+  z-index: 1000;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 1rem; /* Réduisez la hauteur en ajustant le padding */
+  text-align: center;
+
+  .logo img {
+    height: 90px;
+  }
+
+  p {
+    margin-top: 0.5rem;
+    color: #333;
+  }
+}
