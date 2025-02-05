@@ -1,0 +1,23 @@
+.error-page {
+  text-align: center;
+  margin-top: 50px;
+
+  .error-code {
+    font-size: 100px;
+    color: red($color: #ff0000);
+  }
+
+  .error-message {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+
+  .home-link {
+    font-size: 18px;
+    margin-top: 30px;
+    display: inline-block;
+    color: rgb(0, 0, 0);
+
+    cursor: pointer;
+  }
+}

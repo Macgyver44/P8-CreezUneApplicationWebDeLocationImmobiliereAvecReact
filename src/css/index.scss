@@ -11,15 +11,23 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* Mode sombre */
+  --dark-background-color: #242424;
+  --dark-text-color: rgba(255, 255, 255, 0.87);
+  --dark-link-color: #646cff;
+  --dark-link-hover-color: #535bf2;
+  --dark-button-background-color: #1a1a1a;
+  --dark-button-hover-border-color: #646cff;
 }
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: var(--link-color);
   text-decoration: inherit;
 
   &:hover {
-    color: #535bf2;
+    color: var(--link-hover-color);
   }
 }
 * {
@@ -36,6 +44,9 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding: 50px;
 }
 
 h1 {
@@ -50,12 +61,12 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: var(--button-background-color);
   cursor: pointer;
   transition: border-color 0.25s;
 
   &:hover {
-    border-color: #646cff;
+    border-color: var(--button-hover-border-color);
   }
 
   &:focus,
@@ -66,15 +77,38 @@ button {
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    color: var(--text-color);
+    background-color: var(--background-color);
   }
 
   a:hover {
-    color: #747bff;
+    color: var(--link-hover-color);
   }
 
   button {
-    background-color: #f9f9f9;
+    background-color: var(--button-background-color);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    background-color: var(--dark-background-color);
+    color: var(--dark-text-color);
+  }
+
+  a {
+    color: var(--dark-link-color);
+
+    &:hover {
+      color: var(--dark-link-hover-color);
+    }
+  }
+
+  button {
+    background-color: var(--dark-button-background-color);
+
+    &:hover {
+      border-color: var(--dark-button-hover-border-color);
+    }
   }
 }

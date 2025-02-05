@@ -1,0 +1,19 @@
+.error-page {
+  text-align: center;
+  margin-top: 50px;
+}
+.error-page .error-code {
+  font-size: 100px;
+  color: 255;
+}
+.error-page .error-message {
+  font-size: 20px;
+  margin-top: 20px;
+}
+.error-page .home-link {
+  font-size: 18px;
+  margin-top: 30px;
+  display: inline-block;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}/*# sourceMappingURL=notfound.css.map */

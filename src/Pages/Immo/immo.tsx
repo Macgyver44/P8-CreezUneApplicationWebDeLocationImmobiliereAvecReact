@@ -1,7 +1,7 @@
 // src/pages/Home/index.jsx
 
-const Home = () => {
+const Immo = () => {
   return <div>immo test</div>;
 };
 
-export default Home;
+export default Immo;

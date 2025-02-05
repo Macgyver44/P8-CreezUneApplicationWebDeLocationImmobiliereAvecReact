@@ -8,11 +8,28 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 0.5rem 1rem; /* Réduisez la hauteur en ajustant le padding */
+  align-items: center; /* Centre verticalement les éléments */
+  padding: 0.5rem 3rem; /* Réduisez la hauteur en ajustant le padding */
+
+  .header-logo {
+    width: 210px;
+    height: 68px;
+    margin-top: 45px;
+    margin-bottom: 50px; /* Marge du haut de la page et du bas du header, centré horizontalement */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
   .logo img {
-    height: 40px;
+    width: 100%;
+    height: auto; /* Ajustez la hauteur de l'image */
+  }
+
+  .logo svg {
+    width: 100%;
+    height: auto; /* Ajustez la hauteur du SVG */
+    fill: var(--primary-color);
   }
 
   nav ul {
@@ -24,6 +41,8 @@
       text-decoration: none;
       color: #000000;
       font-weight: bold;
+      font-size: 24px;
+
       transition: color 0.3s ease; /* Ajoutez une transition pour l'animation */
 
       &:hover {
@@ -33,21 +52,31 @@
   }
 }
 
-.logo {
+.header-logo {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
 
   &:hover {
-    filter: drop-shadow(0 0 2em #646cffaa);
+    filter: drop-shadow(0 0 2em var(--primary-color));
+  }
+
+  &:hover svg {
+    fill: var(--primary-color);
   }
 
   &.react:hover {
-    filter: drop-shadow(0 0 2em #61dafbaa);
+    filter: drop-shadow(0 0 2em var(--primary-color));
+  }
+
+  &.react:hover svg {
+    fill: var(--primary-color);
   }
 }
 
+/* Commentaire de l'animation logo-spin */
+/*
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -56,9 +85,13 @@
     transform: rotate(100deg);
   }
 }
+*/
 
+/* Commentaire de la règle @media pour l'animation */
+/*
 @media (prefers-reduced-motion: no-preference) {
-  .logo {
+  .header-logo {
     animation: logo-spin infinite 20s linear;
   }
 }
+*/

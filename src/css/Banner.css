@@ -1,0 +1,23 @@
+@charset "UTF-8";
+.banner-container {
+  position: relative;
+  width: 100%;
+  height: 200px; /* Fixez la hauteur du conteneur à 200px */
+  border-radius: 20px;
+}
+.banner-container .banner-image {
+  width: 100%;
+  height: 100%; /* Ajustez la hauteur à 100% du conteneur */
+  border-radius: 20px;
+  -o-object-fit: cover;
+     object-fit: cover; /* Assurez-vous que l'image couvre le conteneur */
+}
+.banner-container .banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  color: #fff; /* Changez la couleur du texte pour qu'il soit visible sur l'image */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ajoutez une ombre pour améliorer la lisibilité */
+}/*# sourceMappingURL=Banner.css.map */

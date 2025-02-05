@@ -1,4 +1,16 @@
 @charset "UTF-8";
+:root {
+  /* Variables de couleur */
+  --primary-color: #ff6060;
+  --secondary-color: #000000;
+  --background-color: #f6f6f6;
+  --text-color: #ffffff;
+  --link-color: #646cff;
+  --link-hover-color: #535bf2;
+  --button-background-color: #1a1a1a;
+  --button-hover-border-color: #646cff;
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -40,10 +52,6 @@
     animation: logo-spin infinite 20s linear;
   }
 }
-.card {
-  padding: 2em;
-}
-
 .read-the-docs {
-  color: #888;
+  color: #970606;
 }/*# sourceMappingURL=App.css.map */

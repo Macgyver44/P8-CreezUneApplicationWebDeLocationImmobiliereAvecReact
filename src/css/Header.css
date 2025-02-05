@@ -9,11 +9,26 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: space-between;
+  align-items: center; /* Centre verticalement les éléments */
+  padding: 0.5rem 3rem; /* Réduisez la hauteur en ajustant le padding */
+}
+.header .header-logo {
+  width: 210px;
+  height: 68px;
+  margin-top: 45px;
+  margin-bottom: 50px; /* Marge du haut de la page et du bas du header, centré horizontalement */
+  display: flex;
+  justify-content: center;
   align-items: center;
-  padding: 0.5rem 1rem; /* Réduisez la hauteur en ajustant le padding */
 }
 .header .logo img {
-  height: 40px;
+  width: 100%;
+  height: auto; /* Ajustez la hauteur de l'image */
+}
+.header .logo svg {
+  width: 100%;
+  height: auto; /* Ajustez la hauteur du SVG */
+  fill: var(--primary-color);
 }
 .header nav ul {
   list-style: none;
@@ -24,25 +39,34 @@
   text-decoration: none;
   color: #000000;
   font-weight: bold;
+  font-size: 24px;
   transition: color 0.3s ease; /* Ajoutez une transition pour l'animation */
 }
 .header nav ul li a:hover {
   color: #007bff; /* Changez la couleur au survol */
 }
 
-.logo {
+.header-logo {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em rgba(100, 108, 255, 0.6666666667));
+.header-logo:hover {
+  filter: drop-shadow(0 0 2em var(--primary-color));
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em rgba(97, 218, 251, 0.6666666667));
+.header-logo:hover svg {
+  fill: var(--primary-color);
+}
+.header-logo.react:hover {
+  filter: drop-shadow(0 0 2em var(--primary-color));
+}
+.header-logo.react:hover svg {
+  fill: var(--primary-color);
 }
 
+/* Commentaire de l'animation logo-spin */
+/*
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -51,8 +75,12 @@
     transform: rotate(100deg);
   }
 }
+*/
+/* Commentaire de la règle @media pour l'animation */
+/*
 @media (prefers-reduced-motion: no-preference) {
-  .logo {
+  .header-logo {
     animation: logo-spin infinite 20s linear;
   }
-}/*# sourceMappingURL=Header.css.map */
+}
+*//*# sourceMappingURL=Header.css.map */

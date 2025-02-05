@@ -1,7 +1,13 @@
-import "./css/App.scss";
+import React from "react";
+import AppRouter from "./Router";
+import "./css/App.scss"; // Importez les styles globaux
 
-function App() {
-  return <div className="App">{/* Votre contenu principal ici */}</div>;
-}
+const App: React.FC = () => {
+  return (
+    <div className="App">
+      <AppRouter />
+    </div>
+  );
+};
 
 export default App;
