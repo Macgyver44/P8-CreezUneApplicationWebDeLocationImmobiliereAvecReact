@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "../css/notfound.scss"; // Importez les styles
 
 const Error: React.FC = () => {
   return (

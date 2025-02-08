@@ -2,12 +2,70 @@
   /* Variables de couleur */
   --primary-color: #ff6060;
   --secondary-color: #000000;
-  --background-color: #f6f6f6;
+  --background-color: #f1f1f1;
   --text-color: #ffffff;
   --link-color: #646cff;
   --link-hover-color: #535bf2;
   --button-background-color: #1a1a1a;
   --button-hover-border-color: #646cff;
+}
+
+[data-theme="dark"] {
+  --primary-color: #1a1a1a;
+  --secondary-color: #ffffff;
+  --background-color: #333333;
+  --text-color: #ffffff;
+  --link-color: #646cff;
+  --link-hover-color: #535bf2;
+  --button-background-color: #ffffff;
+  --button-hover-border-color: #646cff;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+a {
+  color: var(--link-color);
+
+  &:hover {
+    color: var(--link-hover-color);
+  }
+}
+
+button {
+  background-color: var(--button-background-color);
+
+  &:hover {
+    border-color: var(--button-hover-border-color);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    background-color: var(--dark-background-color);
+    color: var(--dark-text-color);
+  }
+
+  a {
+    color: var(--dark-link-color);
+
+    &:hover {
+      color: var(--dark-link-hover-color);
+    }
+  }
+
+  button {
+    background-color: var(--dark-button-background-color);
+
+    &:hover {
+      border-color: var(--dark-button-hover-border-color);
+    }
+  }
 }
 
 #root {
@@ -17,12 +75,61 @@
   text-align: center;
 }
 
+.theme-toggle-logo {
+  height: 7em;
+  padding: 1.5em;
+  cursor: pointer;
+  transition: filter 300ms, transform 0.3s ease;
+
+  &:hover {
+    filter: drop-shadow(0 0 2em var(--button-hover-border-color));
+    transform: scale(1.1); /* Agrandir légèrement le logo au survol */
+  }
+}
+
 .content {
   padding-top: 50px; /* Ajustez cette valeur en fonction de la hauteur de votre header */
   padding-bottom: 30px; /* Ajustez cette valeur en fonction de la hauteur de votre footer */
   max-width: 1200px; /* Ajustez cette valeur selon vos besoins */
+  min-width: 800px; /* Ajustez cette valeur selon vos besoins */
   margin: 0 auto; /* Centre le contenu */
   overflow: hidden; /* Empêche le débordement */
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.card {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: var(--primary-color); /* Utilisez la variable ici */
+  margin: 1rem;
+  width: 300px; /* Ajustez cette valeur selon vos besoins */
+
+  .card-cover {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin: 0.5rem 0;
+  }
+
+  .card-location,
+  .card-rating {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin: 0.25rem 0;
+  }
 }
 
 .logo {
@@ -56,5 +163,5 @@
 }
 
 .read-the-docs {
-  color: #970606;
+  color: #888;
 }

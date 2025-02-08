@@ -1,12 +1,14 @@
 .card-container {
+  padding: 1rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 cartes par ligne */
   gap: 1rem;
   justify-content: center;
-
+  background-color: var(--background-color); /* Utilisez la variable ici */
+  border-radius: 20px;
   .card {
     padding: 1rem;
-    border: 1px solid #0c0620;
+
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     background-color: var(--primary-color); /* Utilisez la variable ici */

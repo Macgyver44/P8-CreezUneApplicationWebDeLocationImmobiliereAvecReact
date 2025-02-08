@@ -1,19 +1,20 @@
-.error-page {
+@charset "UTF-8";
+.error-container {
   text-align: center;
-  margin-top: 50px;
+  padding: 2rem;
 }
-.error-page .error-code {
-  font-size: 100px;
-  color: 255;
+.error-container .error-title {
+  font-size: 16rem; /* Mettre le titre en très grande taille */
+  color: var(--primary-color); /* Mettre le titre en rouge */
+  margin-bottom: 2rem; /* Ajouter un espace en dessous du titre */
 }
-.error-page .error-message {
-  font-size: 20px;
-  margin-top: 20px;
+.error-container .error-message {
+  font-size: 2rem;
+  color: var(--primary-color); /* Mettre le message en rouge */
+  margin-bottom: 4rem; /* Ajouter un espace en dessous du message */
 }
-.error-page .home-link {
-  font-size: 18px;
-  margin-top: 30px;
-  display: inline-block;
-  color: rgb(0, 0, 0);
-  cursor: pointer;
+.error-container .error-link {
+  font-size: 1.2rem;
+  color: var(--secondary-color); /* Mettre le lien en noir */
+  text-decoration: underline; /* Souligner le lien */
 }/*# sourceMappingURL=notfound.css.map */
