@@ -1,0 +1,79 @@
+.project-details {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Aligne les éléments à gauche */
+}
+
+.project-title {
+  color: red; /* Couleur rouge pour le titre */
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+
+.project-location {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.project-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  width: 100%; /* Assurez-vous que l'info prend toute la largeur */
+}
+
+.project-tags {
+  display: flex;
+  gap: 0.5rem;
+
+  .tag {
+    background-color: #f0f0f0;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+  }
+}
+
+.project-host {
+  display: flex;
+  align-items: center;
+
+  .host-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 1rem;
+  }
+
+  .host-info {
+    .host-name {
+      font-size: 1rem;
+      font-weight: bold;
+    }
+
+    .host-rating {
+      display: flex;
+      gap: 0.25rem;
+
+      .star-filled {
+        color: gold;
+      }
+
+      .star-empty {
+        color: lightgray;
+      }
+    }
+  }
+}
+
+.project-details-collapses {
+  display: flex;
+  gap: 2rem;
+  width: 100%; /* Assurez-vous que les collaps prennent toute la largeur */
+
+  .project-collapse {
+    flex: 1;
+  }
+}

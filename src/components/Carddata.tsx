@@ -13,7 +13,7 @@ interface Logement {
     name: string;
     picture: string;
   };
-  rating: string;
+  rating: number;
   location: string;
   equipments: string[];
   tags: string[];
@@ -31,6 +31,7 @@ const Carddata: React.FC = () => {
     <div className="card-container">
       {logements.map((logement) => (
         <Card
+          id={logement.id}
           key={logement.id}
           title={logement.title}
           cover={logement.cover}

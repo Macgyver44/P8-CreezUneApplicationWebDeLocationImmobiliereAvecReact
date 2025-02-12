@@ -1,11 +1,10 @@
-.collapse {
+.project-collapse {
   border: 1px solid #ddd;
   border-radius: 8px;
   margin: 1rem 0;
   overflow: hidden;
-  width: 100%;
 
-  .collapse-header {
+  .project-collapse-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -18,20 +17,20 @@
       font-size: 1.2rem;
     }
 
-    .collapse-chevron {
-      font-size: 1.5rem; /* Augmentez la taille du chevron */
+    .project-collapse-arrow {
+      font-size: 1.2rem;
       transition: transform 0.3s ease;
     }
 
-    .collapse-chevron.open {
+    .project-collapse-arrow.open {
       transform: rotate(180deg);
     }
   }
 
-  .collapse-content {
+  .project-collapse-content {
     padding: 1rem;
-    background-color: #f0f0f0; /* Fond gris pour le contenu */
-    color: var(--secondary-color); /* Couleur du texte */
-    border-top: 1px solid #ddd; /* Séparation entre le header et le contenu */
+    background-color: #f0f0f0;
+    color: #333;
+    border-top: 1px solid #ddd;
   }
 }

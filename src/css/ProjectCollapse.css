@@ -1,0 +1,31 @@
+.project-collapse {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 1rem 0;
+  overflow: hidden;
+}
+.project-collapse .project-collapse-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  cursor: pointer;
+}
+.project-collapse .project-collapse-header h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+.project-collapse .project-collapse-header .project-collapse-arrow {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+.project-collapse .project-collapse-header .project-collapse-arrow.open {
+  transform: rotate(180deg);
+}
+.project-collapse .project-collapse-content {
+  padding: 1rem;
+  background-color: #f0f0f0;
+  color: #333;
+  border-top: 1px solid #ddd;
+}/*# sourceMappingURL=ProjectCollapse.css.map */

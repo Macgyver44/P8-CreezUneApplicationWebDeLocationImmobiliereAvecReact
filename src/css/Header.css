@@ -1,11 +1,6 @@
 @charset "UTF-8";
 .header {
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: #ffffff;
-  z-index: 1000;
+  background-color: var(--background-color-header);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: space-between;
@@ -15,11 +10,8 @@
 .header .header-logo {
   width: 210px;
   height: 68px;
-  margin-top: 45px;
-  margin-bottom: 50px; /* Marge du haut de la page et du bas du header, centré horizontalement */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 38px; /* Marge du haut de la page et du bas du header, centré horizontalement */
 }
 .header .logo img {
   width: 100%;
@@ -36,33 +28,28 @@
   gap: 1rem;
 }
 .header nav ul li a {
+  color: var(--link-color);
   text-decoration: none;
-  color: #000000;
+  position: relative;
   font-weight: bold;
   font-size: 24px;
   transition: color 0.3s ease; /* Ajoutez une transition pour l'animation */
 }
 .header nav ul li a:hover {
-  color: #007bff; /* Changez la couleur au survol */
+  color: var(--link-hover-color);
 }
-
-.header-logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.header nav ul li a:focus, .header nav ul li a:active {
+  color: var(--link-hover-color);
+  outline: none;
 }
-.header-logo:hover {
-  filter: drop-shadow(0 0 2em var(--primary-color));
-}
-.header-logo:hover svg {
-  fill: var(--primary-color);
-}
-.header-logo.react:hover {
-  filter: drop-shadow(0 0 2em var(--primary-color));
-}
-.header-logo.react:hover svg {
-  fill: var(--primary-color);
+.header nav ul li a:focus::after, .header nav ul li a:active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* Ajustez cette valeur pour la position de la barre */
+  width: 100%;
+  height: 2px; /* Ajustez cette valeur pour l'épaisseur de la barre */
+  background-color: var(--link-hover-color);
 }
 
 /* Commentaire de l'animation logo-spin */

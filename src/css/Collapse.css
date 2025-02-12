@@ -28,6 +28,6 @@
 .collapse .collapse-content {
   padding: 1rem;
   background-color: #f0f0f0; /* Fond gris pour le contenu */
-  color: #333; /* Couleur du texte */
+  color: var(--secondary-color); /* Couleur du texte */
   border-top: 1px solid #ddd; /* Séparation entre le header et le contenu */
 }/*# sourceMappingURL=Collapse.css.map */

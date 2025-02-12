@@ -5,62 +5,12 @@
   --secondary-color: #000000;
   --background-color: #f1f1f1;
   --text-color: #ffffff;
-  --link-color: #646cff;
+  --link-color: #000000;
   --link-hover-color: #535bf2;
   --button-background-color: #1a1a1a;
   --button-hover-border-color: #646cff;
 }
 
-[data-theme=dark] {
-  --primary-color: #1a1a1a;
-  --secondary-color: #ffffff;
-  --background-color: #333333;
-  --text-color: #ffffff;
-  --link-color: #646cff;
-  --link-hover-color: #535bf2;
-  --button-background-color: #ffffff;
-  --button-hover-border-color: #646cff;
-}
-
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  background-color: var(--background-color);
-  color: var(--text-color);
-}
-
-a {
-  color: var(--link-color);
-}
-a:hover {
-  color: var(--link-hover-color);
-}
-
-button {
-  background-color: var(--button-background-color);
-}
-button:hover {
-  border-color: var(--button-hover-border-color);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    background-color: var(--dark-background-color);
-    color: var(--dark-text-color);
-  }
-  a {
-    color: var(--dark-link-color);
-  }
-  a:hover {
-    color: var(--dark-link-hover-color);
-  }
-  button {
-    background-color: var(--dark-button-background-color);
-  }
-  button:hover {
-    border-color: var(--dark-button-hover-border-color);
-  }
-}
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -88,39 +38,6 @@ button:hover {
   overflow: hidden; /* Empêche le débordement */
 }
 
-.card-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-}
-
-.card {
-  padding: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  background-color: var(--primary-color); /* Utilisez la variable ici */
-  margin: 1rem;
-  width: 300px; /* Ajustez cette valeur selon vos besoins */
-}
-.card .card-cover {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-.card .card-title {
-  font-size: 1.5rem;
-  color: var(--text-color);
-  margin: 0.5rem 0;
-}
-.card .card-location,
-.card .card-rating {
-  font-size: 1rem;
-  color: var(--text-color);
-  margin: 0.25rem 0;
-}
-
 .logo {
   height: 7em;
   padding: 1.5em;
@@ -128,10 +45,10 @@ button:hover {
   transition: filter 300ms;
 }
 .logo:hover {
-  filter: drop-shadow(0 0 2em rgba(100, 108, 255, 0.6666666667));
+  filter: drop-shadow(0 0 2em rgba(237, 237, 237, 0.6666666667));
 }
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em rgba(97, 218, 251, 0.6666666667));
+  filter: drop-shadow(0 0 2em rgba(0, 0, 0, 0.6666666667));
 }
 
 @keyframes logo-spin {
@@ -148,5 +65,5 @@ button:hover {
   }
 }
 .read-the-docs {
-  color: #888;
+  color: #970606;
 }/*# sourceMappingURL=App.css.map */
