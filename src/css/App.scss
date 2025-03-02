@@ -44,7 +44,9 @@ body {
     margin: 0 auto; /* Centre le contenu */
     overflow: hidden; /* Empêche le débordement */
   }
-
+  li {
+    list-style: none;
+  }
   a {
     font-weight: 500;
     color: var(--link-color);

@@ -42,6 +42,9 @@ body .content {
   margin: 0 auto; /* Centre le contenu */
   overflow: hidden; /* Empêche le débordement */
 }
+body li {
+  list-style: none;
+}
 body a {
   font-weight: 500;
   color: var(--link-color);

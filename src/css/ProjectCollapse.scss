@@ -1,9 +1,8 @@
 .project-collapse {
-  border: 1px solid #ddd;
   border-radius: 8px;
   margin: 1rem 0;
   overflow: hidden;
-
+  width: 100%;
   .project-collapse-header {
     display: flex;
     justify-content: space-between;
@@ -20,10 +19,15 @@
     .project-collapse-arrow {
       font-size: 1.2rem;
       transition: transform 0.3s ease;
+      transform: rotate(
+        180deg
+      ); /* Ajoutez cette ligne pour inverser le sens par défaut */
     }
 
     .project-collapse-arrow.open {
-      transform: rotate(180deg);
+      transform: rotate(
+        0deg
+      ); /* Ajoutez cette ligne pour remettre le chevron à sa position initiale lorsqu'il est ouvert */
     }
   }
 

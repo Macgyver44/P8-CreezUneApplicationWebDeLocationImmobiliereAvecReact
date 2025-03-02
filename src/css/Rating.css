@@ -1,6 +1,7 @@
 .rating {
   display: flex;
   gap: 0.25rem;
+  font-size: 1.5rem;
 }
 .rating .star-filled {
   color: gold;

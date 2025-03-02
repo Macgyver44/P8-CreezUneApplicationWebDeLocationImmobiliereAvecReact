@@ -47,9 +47,12 @@
       margin-bottom: 0.5rem;
 
       .host-name {
-        font-size: 1rem;
+        font-size: 2rem;
         font-weight: bold;
         margin-right: 1rem;
+        color: var(--primary-color);
+        max-width: 150px; /* Définir une largeur maximale pour permettre le retour à la ligne */
+        word-wrap: break-word; /* Permettre le retour à la ligne */
       }
 
       .host-image {
@@ -93,6 +96,7 @@
 
     li {
       text-align: left; /* Aligne le texte à gauche */
+      list-style: none; /* Supprime les marqueurs */
     }
   }
 
@@ -126,9 +130,9 @@
   }
   .project-description {
     width: 100%;
+    gap: 3rem;
     margin-top: 1rem;
     display: flex;
-
     justify-content: space-between;
   }
 }
@@ -147,6 +151,7 @@
       align-items: center;
       text-align: center;
       flex-direction: row-reverse; /* Ajoutez cette ligne pour aligner les éléments en ligne */
+      justify-content: space-between;
       .host-info {
         flex-direction: row; /* Ajoutez cette ligne pour aligner les éléments en ligne */
         align-items: center;
