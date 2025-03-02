@@ -4,8 +4,8 @@ import "../css/Footer.scss";
 function Footer() {
   return (
     <footer className="footer">
-      <div className="logo">
-        <img src={Logo} alt=" logo" />
+      <div>
+        <img src={Logo} alt="logo" />
       </div>
     </footer>
   );

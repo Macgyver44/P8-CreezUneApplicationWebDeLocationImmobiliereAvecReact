@@ -35,14 +35,9 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
       )}
       {images.length > 1 && (
         <div className="carousel-indicators">
-          {images.map((_, index) => (
-            <span
-              key={index}
-              className={`indicator ${index === currentIndex ? "active" : ""}`}
-            >
-              {index + 1}
-            </span>
-          ))}
+          <span className="indicator">
+            {currentIndex + 1}/{images.length}
+          </span>
         </div>
       )}
     </div>

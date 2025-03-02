@@ -5,7 +5,7 @@
   margin: 0 auto;
   overflow: hidden;
   border-radius: 25px; /* Ajoutez cette ligne pour le border-radius */
-  height: 515px; /* Définissez une hauteur fixe */
+  height: 415px; /* Réduisez la hauteur fixe */
 
   img {
     width: 100%;
@@ -20,12 +20,18 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
+    background: none; /* Supprimez l'arrière-plan */
+    color: var(--text-color);
     border: none;
-    padding: 1rem;
+    padding: 2rem;
+    font-size: 4rem; /* Augmentez la taille de la police pour agrandir l'icône */
     cursor: pointer;
     z-index: 10;
+    transition: transform 0.2s ease; /* Ajoutez une transition pour l'effet de clic */
+
+    &:active {
+      transform: translateY(-50%) scale(0.9); /* Réduisez la taille lors du clic */
+    }
 
     &.prev {
       left: 0;
@@ -41,20 +47,10 @@
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
-    display: flex;
-    gap: 0.5rem;
 
-    .indicator {
-      background-color: rgba(0, 0, 0, 0.5);
-      color: white;
-      padding: 0.5rem;
-      border-radius: 50%;
-      cursor: pointer;
-
-      &.active {
-        background-color: rgba(255, 255, 255, 0.8);
-        color: black;
-      }
-    }
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 1rem;
   }
 }

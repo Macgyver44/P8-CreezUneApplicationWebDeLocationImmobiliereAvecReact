@@ -50,24 +50,4 @@
   width: 100%;
   height: 2px; /* Ajustez cette valeur pour l'épaisseur de la barre */
   background-color: var(--link-hover-color);
-}
-
-/* Commentaire de l'animation logo-spin */
-/*
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(100deg);
-  }
-}
-*/
-/* Commentaire de la règle @media pour l'animation */
-/*
-@media (prefers-reduced-motion: no-preference) {
-  .header-logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-*//*# sourceMappingURL=Header.css.map */
+}/*# sourceMappingURL=Header.css.map */

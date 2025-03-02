@@ -1,61 +1,69 @@
 .project-details {
-  padding: 2rem;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Aligne les éléments à gauche */
-}
+  align-items: flex-end;
+  padding: 1rem;
 
-.project-title {
-  color: red; /* Couleur rouge pour le titre */
-  font-size: 2rem;
-  margin: 1rem 0;
-}
-
-.project-location {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-}
-
-.project-info {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 2rem;
-  width: 100%; /* Assurez-vous que l'info prend toute la largeur */
-}
-
-.project-tags {
-  display: flex;
-  gap: 0.5rem;
-
-  .tag {
-    background-color: #f0f0f0;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-size: 0.9rem;
-  }
-}
-
-.project-host {
-  display: flex;
-  align-items: center;
-
-  .host-image {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 1rem;
+  .project-title {
+    color: var(--primary-color); /* Couleur rouge pour le titre */
+    font-size: 2rem;
+    margin: 1rem 0;
   }
 
-  .host-info {
-    .host-name {
-      font-size: 1rem;
-      font-weight: bold;
+  .project-location {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .project-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    width: 100%; /* Assurez-vous que l'info prend toute la largeur */
+  }
+
+  .project-tags {
+    display: flex;
+    gap: 0.5rem;
+
+    .tag {
+      background-color: var(--primary-color);
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+    }
+  }
+
+  .project-host {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-bottom: 1rem;
+
+    .host-info {
+      display: flex;
+      align-items: center; /* Aligner le texte et l'image au centre */
+      margin-bottom: 0.5rem;
+
+      .host-name {
+        font-size: 1rem;
+        font-weight: bold;
+        margin-right: 1rem;
+      }
+
+      .host-image {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+      }
     }
 
     .host-rating {
       display: flex;
       gap: 0.25rem;
+      justify-content: flex-end; /* Centrer les étoiles */
+      width: 100%; /* Prendre toute la largeur du conteneur */
 
       .star-filled {
         color: gold;
@@ -66,14 +74,100 @@
       }
     }
   }
+
+  .project-details-collapses {
+    display: flex;
+    gap: 2rem;
+    width: 100%; /* Assurez-vous que les collaps prennent toute la largeur */
+
+    .project-collapse {
+      flex: 1;
+      margin: 0 0.5rem; /* Ajoutez une marge pour espacer les collaps */
+    }
+
+    ul {
+      list-style: none; /* Supprime les marqueurs */
+      padding: 0; /* Supprime le padding par défaut */
+      margin: 0; /* Supprime la marge par défaut */
+    }
+
+    li {
+      text-align: left; /* Aligne le texte à gauche */
+    }
+  }
+
+  .project-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 1rem;
+    .project-left,
+    .project-right {
+      flex: 1;
+      padding: 1rem;
+    }
+
+    .project-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .project-right {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .project-equipments {
+      margin-top: 1rem;
+    }
+  }
+  .project-description {
+    width: 100%;
+    margin-top: 1rem;
+    display: flex;
+
+    justify-content: space-between;
+  }
 }
 
-.project-details-collapses {
-  display: flex;
-  gap: 2rem;
-  width: 100%; /* Assurez-vous que les collaps prennent toute la largeur */
+/* Media queries pour le mode mobile */
+@media (max-width: 800px) {
+  .project-content {
+    flex-direction: column;
 
-  .project-collapse {
-    flex: 1;
+    .project-left,
+    .project-right {
+      padding: 0;
+    }
+
+    .project-host {
+      align-items: center;
+      text-align: center;
+      flex-direction: row-reverse; /* Ajoutez cette ligne pour aligner les éléments en ligne */
+      .host-info {
+        flex-direction: row; /* Ajoutez cette ligne pour aligner les éléments en ligne */
+        align-items: center;
+
+        .host-name {
+          margin-right: 10px; /* Pousser le nom de l'hôte à gauche */
+        }
+
+        .host-image {
+          margin-left: 10px; /* Pousser l'image à droite */
+        }
+      }
+
+      .host-rating {
+        justify-content: flex-start; /* Aligner les étoiles à gauche */
+        width: auto; /* Ajuster la largeur pour ne pas prendre toute la largeur */
+      }
+    }
+  }
+
+  .project-description {
+    flex-direction: column;
   }
 }

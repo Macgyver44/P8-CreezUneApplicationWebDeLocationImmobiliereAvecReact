@@ -1,7 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar } from "@fortawesome/free-solid-svg-icons";
+import Rating from "./Rating";
 import "../css/Card.scss";
 
 interface CardProps {
@@ -19,26 +18,14 @@ const Card: React.FC<CardProps> = ({ id, title, cover, location, rating }) => {
     navigate(`/project/${id}`);
   };
 
-  const renderStars = () => {
-    const stars = [];
-    for (let i = 0; i < 5; i++) {
-      stars.push(
-        <FontAwesomeIcon
-          key={i}
-          icon={faStar}
-          className={i < rating ? "star-filled" : "star-empty"}
-        />
-      );
-    }
-    return stars;
-  };
-
   return (
     <div className="card" onClick={handleClick}>
       <img src={cover} alt={title} className="card-cover" />
-      <h2 className="card-title">{title}</h2>
-      <p className="card-location">{location}</p>
-      <div className="card-rating">{renderStars()}</div>
+      <div className="card-texte-contenair">
+        <h2 className="card-title">{title}</h2>
+        <p className="card-location">{location}</p>
+        <Rating rating={rating} />
+      </div>
     </div>
   );
 };

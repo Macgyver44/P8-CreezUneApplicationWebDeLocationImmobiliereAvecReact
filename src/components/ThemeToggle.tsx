@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
-import logo from "../images/logo.svg"; // Assurez-vous que le chemin vers le logo est correct
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
+import "../css/ThemeToggle.scss"; // Assurez-vous que les styles sont importés
+import "../css/App.scss"; // Assurez-vous que les styles sont importés
 
 const ThemeToggle: React.FC = () => {
   const [theme, setTheme] = useState("light");
@@ -13,12 +16,9 @@ const ThemeToggle: React.FC = () => {
   };
 
   return (
-    <img
-      src={logo}
-      alt="Toggle Theme"
-      className="theme-toggle-logo"
-      onClick={toggleTheme}
-    />
+    <button className="theme-toggle-button" onClick={toggleTheme}>
+      <FontAwesomeIcon icon={theme === "light" ? faMoon : faSun} />
+    </button>
   );
 };
 

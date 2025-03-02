@@ -1,0 +1,10 @@
+.rating {
+  display: flex;
+  gap: 0.25rem;
+}
+.rating .star-filled {
+  color: gold;
+}
+.rating .star-empty {
+  color: lightgray;
+}/*# sourceMappingURL=Rating.css.map */

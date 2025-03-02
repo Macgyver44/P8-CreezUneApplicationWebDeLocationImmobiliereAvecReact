@@ -13,7 +13,7 @@ interface Logement {
     name: string;
     picture: string;
   };
-  rating: number;
+  rating: string;
   location: string;
   equipments: string[];
   tags: string[];

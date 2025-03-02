@@ -4,8 +4,7 @@ import Carousel from "../../components/Carousel";
 import ProjectCollapse from "../../components/ProjectCollapse";
 import logementsData from "../../data/logements.json";
 import "../../css/ProjectDetails.scss";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar } from "@fortawesome/free-solid-svg-icons";
+import Rating from "../../components/Rating";
 
 const ProjectDetails: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -18,41 +17,35 @@ const ProjectDetails: React.FC = () => {
   return (
     <div className="project-details">
       <Carousel images={project.pictures} />
-      <h1 className="project-title">{project.title}</h1>
-      <p className="project-location">{project.location}</p>
-      <div className="project-info">
-        <div className="project-tags">
-          {project.tags.map((tag, index) => (
-            <span key={index} className="tag">
-              {tag}
-            </span>
-          ))}
+      <div className="project-content">
+        <div className="project-left">
+          <h1 className="project-title">{project.title}</h1>
+          <p className="project-location">{project.location}</p>
+          <div className="project-tags">
+            {project.tags.map((tag, index) => (
+              <span key={index} className="tag">
+                {tag}
+              </span>
+            ))}
+          </div>
         </div>
-        <div className="project-host">
-          <img
-            src={project.host.picture}
-            alt={project.host.name}
-            className="host-image"
-          />
-          <div className="host-info">
-            <p className="host-name">{project.host.name}</p>
+        <div className="project-right">
+          <div className="project-host">
+            <div className="host-info">
+              <p className="host-name">{project.host.name}</p>
+              <img
+                src={project.host.picture}
+                alt={project.host.name}
+                className="host-image"
+              />
+            </div>
             <div className="host-rating">
-              {Array.from({ length: 5 }, (_, index) => (
-                <FontAwesomeIcon
-                  key={index}
-                  icon={faStar}
-                  className={
-                    index < Number(project.rating)
-                      ? "star-filled"
-                      : "star-empty"
-                  }
-                />
-              ))}
+              <Rating rating={Number(project.rating)} />
             </div>
           </div>
         </div>
       </div>
-      <div className="project-details-collapses">
+      <div className="project-description">
         <ProjectCollapse title="Description">
           <p>{project.description}</p>
         </ProjectCollapse>
