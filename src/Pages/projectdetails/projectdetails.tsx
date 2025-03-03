@@ -1,5 +1,5 @@
-import React from "react";
-import { useParams } from "react-router-dom";
+import React, { useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 import Carousel from "../../components/Carousel";
 import ProjectCollapse from "../../components/ProjectCollapse";
 import logementsData from "../../data/logements.json";
@@ -8,10 +8,17 @@ import Rating from "../../components/Rating";
 
 const ProjectDetails: React.FC = () => {
   const { id } = useParams<{ id: string }>();
+  const navigate = useNavigate();
   const project = logementsData.find((project) => project.id === id);
 
+  useEffect(() => {
+    if (!project) {
+      navigate("/not-found");
+    }
+  }, [project, navigate]);
+
   if (!project) {
-    return <div>Projet non trouvé</div>;
+    return null; // Vous pouvez également afficher un spinner ou un message de chargement ici
   }
 
   return (

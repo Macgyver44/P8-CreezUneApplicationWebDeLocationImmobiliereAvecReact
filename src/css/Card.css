@@ -51,11 +51,4 @@
 .card-container .card .card-texte-contenair .card p {
   font-size: 1rem;
   color: #666;
-}
-
-/* Media queries pour le mode mobile */
-@media (max-width: 800px) {
-  .card-container {
-    grid-template-columns: 1fr; /* 1 carte par ligne */
-  }
 }/*# sourceMappingURL=Card.css.map */

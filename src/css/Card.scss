@@ -58,10 +58,3 @@
     }
   }
 }
-
-/* Media queries pour le mode mobile */
-@media (max-width: 800px) {
-  .card-container {
-    grid-template-columns: 1fr; /* 1 carte par ligne */
-  }
-}
