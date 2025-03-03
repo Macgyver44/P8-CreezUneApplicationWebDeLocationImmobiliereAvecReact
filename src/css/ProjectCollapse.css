@@ -12,6 +12,7 @@
   padding: 1rem;
   background-color: var(--primary-color);
   cursor: pointer;
+  color: var(--text-color);
 }
 .project-collapse .project-collapse-header h2 {
   margin: 0;

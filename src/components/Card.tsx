@@ -1,17 +1,15 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import Rating from "./Rating";
+
 import "../css/Card.scss";
 
 interface CardProps {
   id: string;
   title: string;
   cover: string;
-  location: string;
-  rating: number;
 }
 
-const Card: React.FC<CardProps> = ({ id, title, cover, location, rating }) => {
+const Card: React.FC<CardProps> = ({ id, title, cover }) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
@@ -21,11 +19,7 @@ const Card: React.FC<CardProps> = ({ id, title, cover, location, rating }) => {
   return (
     <div className="card" onClick={handleClick}>
       <img src={cover} alt={title} className="card-cover" />
-      <div className="card-texte-contenair">
-        <h2 className="card-title">{title}</h2>
-        <p className="card-location">{location}</p>
-        <Rating rating={rating} />
-      </div>
+      <h2 className="card-title">{title}</h2>
     </div>
   );
 };

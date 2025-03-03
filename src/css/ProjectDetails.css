@@ -13,6 +13,7 @@
 .project-details .project-location {
   font-size: 1.2rem;
   margin-bottom: 1rem;
+  font-weight: 500; /* Texte en gras */
 }
 .project-details .project-info {
   display: flex;
@@ -24,6 +25,8 @@
 .project-details .project-tags {
   display: flex;
   gap: 0.5rem;
+  color: var(--text-color); /* Couleur du texte */
+  font-weight: bold; /* Texte en gras */
 }
 .project-details .project-tags .tag {
   background-color: var(--primary-color);
@@ -40,14 +43,13 @@
 .project-details .project-host .host-info {
   display: flex;
   align-items: center; /* Aligner le texte et l'image au centre */
-  margin-bottom: 0.5rem;
+  margin-bottom: 2.5rem;
 }
 .project-details .project-host .host-info .host-name {
   font-size: 2rem;
-  font-weight: bold;
-  margin-right: 1rem;
+  font-weight: 500;
   color: var(--primary-color);
-  max-width: 150px; /* Définir une largeur maximale pour permettre le retour à la ligne */
+  max-width: 170px; /* Définir une largeur maximale pour permettre le retour à la ligne */
   word-wrap: break-word; /* Permettre le retour à la ligne */
 }
 .project-details .project-host .host-info .host-image {
@@ -62,7 +64,7 @@
   width: 100%; /* Prendre toute la largeur du conteneur */
 }
 .project-details .project-host .host-rating .star-filled {
-  color: gold;
+  color: var(--primary-color);
 }
 .project-details .project-host .host-rating .star-empty {
   color: lightgray;
@@ -95,7 +97,6 @@
 .project-details .project-content .project-left,
 .project-details .project-content .project-right {
   flex: 1;
-  padding: 1rem;
 }
 .project-details .project-content .project-left {
   display: flex;
@@ -112,7 +113,7 @@
 }
 .project-details .project-description {
   width: 100%;
-  gap: 3rem;
+  gap: 1rem;
   margin-top: 1rem;
   display: flex;
   justify-content: space-between;
@@ -139,6 +140,7 @@
   }
   .project-content .project-host .host-info .host-name {
     margin-right: 10px; /* Pousser le nom de l'hôte à gauche */
+    font-weight: lighter; /* Texte en gras */
   }
   .project-content .project-host .host-info .host-image {
     margin-left: 10px; /* Pousser l'image à droite */

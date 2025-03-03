@@ -13,6 +13,7 @@
   .project-location {
     font-size: 1.2rem;
     margin-bottom: 1rem;
+    font-weight: 500; /* Texte en gras */
   }
 
   .project-info {
@@ -26,7 +27,8 @@
   .project-tags {
     display: flex;
     gap: 0.5rem;
-
+    color: var(--text-color); /* Couleur du texte */
+    font-weight: bold; /* Texte en gras */
     .tag {
       background-color: var(--primary-color);
       padding: 0.5rem 1rem;
@@ -44,14 +46,14 @@
     .host-info {
       display: flex;
       align-items: center; /* Aligner le texte et l'image au centre */
-      margin-bottom: 0.5rem;
+      margin-bottom: 2.5rem;
 
       .host-name {
         font-size: 2rem;
-        font-weight: bold;
-        margin-right: 1rem;
+        font-weight: 500;
+
         color: var(--primary-color);
-        max-width: 150px; /* Définir une largeur maximale pour permettre le retour à la ligne */
+        max-width: 170px; /* Définir une largeur maximale pour permettre le retour à la ligne */
         word-wrap: break-word; /* Permettre le retour à la ligne */
       }
 
@@ -69,7 +71,7 @@
       width: 100%; /* Prendre toute la largeur du conteneur */
 
       .star-filled {
-        color: gold;
+        color: var(--primary-color);
       }
 
       .star-empty {
@@ -109,7 +111,6 @@
     .project-left,
     .project-right {
       flex: 1;
-      padding: 1rem;
     }
 
     .project-left {
@@ -130,7 +131,7 @@
   }
   .project-description {
     width: 100%;
-    gap: 3rem;
+    gap: 1rem;
     margin-top: 1rem;
     display: flex;
     justify-content: space-between;
@@ -158,6 +159,7 @@
 
         .host-name {
           margin-right: 10px; /* Pousser le nom de l'hôte à gauche */
+          font-weight: lighter; /* Texte en gras */
         }
 
         .host-image {
